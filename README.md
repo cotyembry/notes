@@ -1,6 +1,8 @@
 # notes
 
-I literally created this repo just for a place to put notes about, well.. code I suppose.
+I literally created this repo just for a place to put notes about, well.. code I suppose. And  help on some processes
+
+#git help
 
 To get a git repo set up the following things worked for me:
 
