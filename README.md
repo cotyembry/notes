@@ -26,7 +26,11 @@ Then to make sure that both the local version (on the actual computer your sitti
 And finally to  push the  project
 
     git push -u origin master
-    
+
+And if that doesn't work, to force the push you can do:
+
+    git push -u -f origin master
+
 ...something like that
 
 Oh yeah,
