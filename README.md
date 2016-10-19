@@ -155,7 +155,7 @@ now to try to merge the whole feature1 branch to master do:
 
 now go to github.com and go to the repo where master is
 
-
+and you can create a pull request to finally delete the branch
 
 
 
@@ -168,6 +168,16 @@ Once done with that, try it again
     git merge master
 
 and hopefully its all set up and has been successfully merged!
+
+#delete branch
+
+remember to see the branches:
+
+    git branch
+    
+and again to delete it:
+    
+    git branch -d the_local_branch_name
 
 #extra help
 
