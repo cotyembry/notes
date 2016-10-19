@@ -95,3 +95,84 @@ finally you can push the new project to the repo, but first add a commit message
 and finally actually do the push
 
     git push origin master
+
+-------
+
+#branches
+
+Ok, so now that a project is set up, its time to go over branching
+
+To see what branches exist, in the root directory enter:
+
+    git branch
+    
+This will list all the branches that exist
+
+To create a branch (a complete copy of all the code from master)
+
+    git branch feature1
+    
+and to switch to it to start working on the new code do:
+
+    git checkout feature1
+
+where feature1 can be any name you wish (that is unique to the branches)
+
+This will actually change into the feature1 branch for you (you don't need to do like a `cd ./feature1` type of command)
+
+now any changes in this new project (technically speaking its a "new branch") will not effect master
+
+now act like this current branch (feature1) is master and write some code! (We will go over commands in a second to create a pull request and merge this later back to master)
+
+#pull request
+
+first since currently the branch that is being worked on is feature1 and we want to do a pull request to get the feature1 branch merged into master we need to get back into the master branch to make sure there weren't any code updates to the master branch while working on the feature1 branch
+
+    git checkout master
+    
+this will switch back to the master branch
+
+now before doing anything else, to make sure that get any updates that may have been made to master
+
+    git pull
+ 
+and now time to go back to the feature1 branch
+
+    git checkout feature1
+
+now that we are confident the project is up to date, push the changes to the feature1 branch
+
+    git commit -m "say your custom commit message here"
+
+if you do `git push` here it will probably give some type of error or warning. This is because it doesn't know where to push the code to. You can then do the following to resolve this:
+
+    git push --set-upstream origin feature1
+    
+
+now to try to merge the whole feature1 branch to master do:
+
+    git merge master
+
+now go to github.com and go to the repo where master is
+
+
+
+
+
+you might not have to do this next step, but just for extra info:
+
+sometimes there will be file conflicts here after trying to merge the branches. To fix them, you will have to manually look at the code and the lines that were having the conflicts and manually fix the issues.
+
+Once done with that, try it again
+
+    git merge master
+
+and hopefully its all set up and has been successfully merged!
+
+#extra help
+
+go to the following and watch the 11 minute video for more help
+https://www.youtube.com/watch?v=oFYyTZwMyAg
+
+if you want to see the introduction one to it you can see
+https://www.youtube.com/watch?v=0fKg7e37bQE
