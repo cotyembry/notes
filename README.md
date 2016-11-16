@@ -179,6 +179,23 @@ and again to delete it:
     
     git branch -d the_local_branch_name
 
+#Error message issues
+When tryihg to git add ... files, or in general, if you get the error that says something like:
+    
+    Another git process seems to be running in this repository, e.g.
+    an editor opened by 'git commit'. Please make sure all processes
+    are terminated then try again. If it still fails, a git process
+    may have crashed in this repository earlier:
+    remove the file manually to continue.
+    
+To resolve it you can do:
+
+    rm -f ./.git/index.lock
+
+If you still have problems you can refer to
+http://stackoverflow.com/questions/38004148/another-git-process-seems-to-be-running-in-this-repository
+for more help
+
 #extra help
 
 go to the following and watch the 11 minute video for more help
