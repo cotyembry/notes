@@ -179,6 +179,14 @@ and again to delete it:
     
     git branch -d the_local_branch_name
 
+#Resetting files that are staged to be commited
+I accidentally did `git add <filename>` and it somehow added all of the files..? Anyways, I wanted to undo this hiccup so I found out that doing the following can fix the issue and rollback the staged files to nothing to be commited
+
+    git reset HEAD -- .
+
+see http://stackoverflow.com/questions/19730565/how-to-remove-files-from-git-staging-area for more info on this command
+It might take a little while to run as well so be prepared to wait...
+
 #Error message issues
 When tryihg to git add ... files, or in general, if you get the error that says something like:
     
