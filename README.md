@@ -184,7 +184,8 @@ I accidentally did `git add <filename>` and it somehow added all of the files..?
 
     git reset HEAD -- .
 
-see http://stackoverflow.com/questions/19730565/how-to-remove-files-from-git-staging-area for more info on this command
+see http://stackoverflow.com/questions/19730565/how-to-remove-files-from-git-staging-area for more info on this command.
+
 It might take a little while to run as well so be prepared to wait...
 
 #Error message issues
