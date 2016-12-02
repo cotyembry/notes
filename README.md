@@ -7,7 +7,7 @@ I literally created this repo just for a place to put notes about, well.. code I
 To get a git repo set up the following things worked for me:
 
     git init
-    git add .
+    git add -A
     git commit -m "First commit"
     
 Then I created a repository on github.com under my profile. After that I copied the url that was produced for the repo
@@ -78,6 +78,12 @@ Oh yeah,
 If you need to remove the hidden .git file (to restart the whole git repo process - i.e. before you said the very first command `git init`), you can use the following command for help ut make sure that you are in the home directory of your project since that is where the .git file is located:
 
     rm -rf .git
+
+#remove commited changes that have not been pushed
+
+    git reset
+
+this will stop any changes that have been set to be pushed
 
 -------
 #tracked files, staged files, unstaged
@@ -208,6 +214,13 @@ To resolve it you can do:
 If you still have problems you can refer to
 http://stackoverflow.com/questions/38004148/another-git-process-seems-to-be-running-in-this-repository
 for more help
+
+    You have not concluded your merge (MERGE_HEAD exists).
+    Please, commit your changes before you can merge.
+    
+To resolve this you can fix the files manually that it says are wrong or do
+
+    git merge --abort
 
 #extra help
 
