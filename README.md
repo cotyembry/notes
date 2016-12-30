@@ -233,7 +233,7 @@ So to fix this I have to explicitly set the project directory and the working di
     
 To make things easier on me I set the environment variable up to be
 
-    gitCustom="git --git-dir=/d/CACHESYS/CSP/cah/.git --work-tree=/d/CACHESYS/CSP/cah/"
+    gitCustom="git --git-dir=/d/CACHESYS/CSP/cah/.git --work-tree=/d/CACHESYS/CSP/cah/"; cd /d/CACHESYS/CSP/cah/
     
 And to use the command and do a normal `git status` for instance you would do
 
