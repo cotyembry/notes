@@ -231,9 +231,9 @@ So to fix this I have to explicitly set the project directory and the working di
 
     git --git-dir=/d/CACHESYS/CSP/cah/.git --work-tree=/d/CACHESYS/CSP/cah/ status
     
-To make things easier on me I set the environment variable up to be
+To make things easier on me I set the environment variable up to be (gitc == gitCustom)
 
-    gitCustom="git --git-dir=/d/CACHESYS/CSP/cah/.git --work-tree=/d/CACHESYS/CSP/cah/"; cd /d/CACHESYS/CSP/cah/
+    gitc="git --git-dir=/d/CACHESYS/CSP/cah/.git --work-tree=/d/CACHESYS/CSP/cah/"; cd /d/CACHESYS/CSP/cah/
     
 And to use the command and do a normal `git status` for instance you would do
 
