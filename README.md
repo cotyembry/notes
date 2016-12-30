@@ -221,6 +221,23 @@ for more help
 To resolve this you can fix the files manually that it says are wrong or do
 
     git merge --abort
+    
+#mapped drives
+Sometimes I use a mapped drive to access the git repo and its files and other times I remotely log into the server. When I remotely logg in, .git has it setup that the top level directory is `/y/` (i.e. `Y:/`) so when I do `git status` the command fails saying
+
+    fatal: Could not switch to 'Y:/': No such file or directory
+    
+So to fix this I have to explicitly set the project directory and the working directory. In my case (with respect to the paths I had to add to get this to work) I put the following command down that worked
+
+    git --git-dir=/d/CACHESYS/CSP/cah/.git --work-tree=/d/CACHESYS/CSP/cah/ status
+    
+To make things easier on me I set the environment variable up to be
+
+    gitCustom="git --git-dir=/d/CACHESYS/CSP/cah/.git --work-tree=/d/CACHESYS/CSP/cah/"
+    
+And to use the command and do a normal `git status` for instance you would do
+
+    $gitCustom status
 
 #extra help
 
