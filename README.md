@@ -222,7 +222,7 @@ To resolve this you can fix the files manually that it says are wrong or do
 
     git merge --abort
 
-#Untracked files, Staged files, Commit files; .gitignore help to deal with these files
+#.gitignore help to deal with the following: Untracked files, Staged files, and Committed files
 .gitignore will only ignore files that are `untracked` meaning they have never been commit (or if they have been commited the files need to be changed from `tracked` to `untracked`
 
 to do this do the following
