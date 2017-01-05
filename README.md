@@ -221,7 +221,16 @@ for more help
 To resolve this you can fix the files manually that it says are wrong or do
 
     git merge --abort
+
+#Untracked files, Staged files, Commit files; .gitignore help to deal with these files
+.gitignore will only ignore files that are `untracked` meaning they have never been commit (or if they have been commited the files need to be changed from `tracked` to `untracked`
+
+to do this do the following
+
+    git rm --cached <pathToFileOrTheFileName>
     
+This will untrack the file specified. Now what you can do once the file is untracked is add it to the .gitignore file. Once its added to the .gitignore file, do `git status` again and the file that was specified to be untracked should no longer show up
+
 #mapped drives
 Sometimes I use a mapped drive to access the git repo and its files and other times I remotely log into the server. When I remotely logg in, .git has it setup that the top level directory is `/y/` (i.e. `Y:/`) so when I do `git status` the command fails saying
 
