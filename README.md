@@ -246,7 +246,7 @@ To make things easier on me I set the environment variable up to be (gitc == git
     
 And to use the command and do a normal `git status` for instance you would do
 
-    $gitCustom status
+    $gitc status
 
 #extra help
 
