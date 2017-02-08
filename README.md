@@ -185,6 +185,10 @@ and again to delete it:
     
     git branch -d the_local_branch_name
 
+#commiting deleted files
+
+    git ls-files --deleted -z | xargs -0 git rm 
+
 #Resetting files that are staged to be commited
 I accidentally did `git add <filename>` and it somehow added all of the files..? Anyways, I wanted to undo this hiccup so I found out that doing the following can fix the issue and rollback the staged files to nothing to be commited
 
