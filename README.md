@@ -259,3 +259,23 @@ https://www.youtube.com/watch?v=oFYyTZwMyAg
 
 if you want to see the introduction one to it you can see
 https://www.youtube.com/watch?v=0fKg7e37bQE
+
+
+
+
+#Mischelaneous(sp)
+
+
+
+#webpack - css stylesheet loader
+
+    npm install style-loader css-loader --save-dev
+    
+    {
+        // ...
+        module: {
+            loaders: [
+                { test: /\.css$/, loader: "style-loader!css-loader" }
+            ]
+        }
+    }
