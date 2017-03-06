@@ -279,3 +279,15 @@ https://www.youtube.com/watch?v=0fKg7e37bQE
             ]
         }
     }
+
+
+#cd to a mapped drive
+
+cd is primarily for changing directories, you're trying to change drives.
+from the command prompt type
+
+    z: 
+
+or
+
+    cd /D z:
