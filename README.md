@@ -4,6 +4,11 @@ I literally created this repo just for a place to put notes about, well.. code I
 
 #git help
 
+drop the last stashed item
+
+    git stash drop
+    
+
 To get a git repo set up the following things worked for me:
 
     git init
