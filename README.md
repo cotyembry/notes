@@ -257,6 +257,33 @@ And to use the command and do a normal `git status` for instance you would do
 
     $gitc status
 
+#submodules
+So if you want to have the master/ git repo and also have it include submodules (i.e. a git repo that is a child of the master/ branch), from scratch you can be inside the master/ repo and do
+
+    git submodule add https://github.com/cotyembry/someRepo.git
+    
+this will clode the submodule to the master/ repo sort of like doing a `git clone ...` would
+Now when making changes to the submodule, you need to `cd` into the submodules root folder and do
+
+    git add -A
+    git commit -m "committing submodule changes"
+    git push origin master #or whatever the branch and remote names are for the repo
+    
+YOUR NOT DONE YET
+What that did was push all the changes to the .git repo of the submodule (as if it was an independent .git repo that was created with `git init` or `git clone https://github.com/...`
+
+Now `cd` up to the master's git repo and do
+
+    git status
+    
+this should let you know that there are things ready to be committed to the master branch (i.e. the submodule has commits that need to be added to the master branches history)
+So to commit the changes that were done to the submodule to master do (inside the main master repo that is the parent of the submodule):
+
+    git add -A
+    git commit -m "committing the changes to the master branch that were done and pushed in the submodule repo"
+    git push origin master #or whatever the branch and remote names are for the repo
+    
+
 #extra help
 
 go to the following and watch the 11 minute video for more help
