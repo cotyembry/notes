@@ -326,3 +326,12 @@ or
 
 # RDP from the command line
 mstsc.exe {ConnectionFile | /v:ServerName[:Port]} [/console] [/f] [/w:Width/h:Height] 
+
+
+
+
+# Pull in one file with git
+
+git fetch <remote>
+
+git checkout FETCH_HEAD - - <file>
