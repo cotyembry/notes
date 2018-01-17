@@ -335,3 +335,12 @@ mstsc.exe {ConnectionFile | /v:ServerName[:Port]} [/console] [/f] [/w:Width/h:He
 git fetch <remote>
 
 git checkout FETCH_HEAD - - <file>
+    
+    
+# Trigger custom event with custom object with jquery in the browser
+	$(this.props.parentReference).trigger({
+		type: 'addedClassName',
+		trReference: tr
+	});	//send event up to parent component to add this tr into a variable array
+						
+						
