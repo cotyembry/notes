@@ -338,6 +338,9 @@ git checkout FETCH_HEAD - - <file>
     
     
 # Trigger custom event with custom object with jquery in the browser
+	$(this.parentReference).on('addedClassName', (e) => {
+		console.log('in on part of trigger with: ', e);
+	})
 	$(this.props.parentReference).trigger({
 		type: 'addedClassName',
 		trReference: tr
