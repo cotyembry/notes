@@ -346,4 +346,29 @@ git checkout FETCH_HEAD - - <file>
 		trReference: tr
 	});	//send event up to parent component to add this tr into a variable array
 						
-						
+	
+# css keyframes syntax
+
+
+        .fadeIn {
+            animation: fadeIn 2s;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .buttonHover:hover {
+            background-color: rgb(194, 185, 185);
+        }
+
+        .buttonHover:active {
+            background-color: rgb(146, 145, 145);
+        }
+        .button {
+            background-color: white;
+        }
