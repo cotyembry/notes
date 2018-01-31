@@ -2,7 +2,7 @@
 
 I literally created this repo just for a place to put notes about, well.. code I suppose. And  help on some processes
 
-#git help
+# git help
 
 drop the last stashed item
 
@@ -91,7 +91,7 @@ If you need to remove the hidden .git file (to restart the whole git repo proces
 this will stop any changes that have been set to be pushed
 
 -------
-#tracked files, staged files, unstaged
+# tracked files, staged files, unstaged
 
 when __changing__ files that are already tracked (i.e. already added to the project with the `git add <filename here>` command) the files become _unstaged_. Well, from there to _stage_ them (meaning, add the files that have been changed to the list of files to be pushed on the next commit - i.e. update these files in the repository with the code that is located locally) anyways..., if the files are not staged they cannot be pushed to github thus, the new code will not be updated to the project. So, to _stage_ the files do the following on the command line:
 
@@ -109,7 +109,7 @@ and finally actually do the push
 
 -------
 
-#branches
+# branches
 
 Ok, so now that a project is set up, its time to go over branching
 
@@ -135,7 +135,7 @@ now any changes in this new project (technically speaking its a "new branch") wi
 
 now act like this current branch (feature1) is master and write some code! (We will go over commands in a second to create a pull request and merge this later back to master)
 
-#pull request
+# pull request
 
 first since currently the branch that is being worked on is feature1 and we want to do a pull request to get the feature1 branch merged into master we need to get back into the master branch to make sure there weren't any code updates to the master branch while working on the feature1 branch
 
@@ -190,11 +190,11 @@ and again to delete it:
     
     git branch -d the_local_branch_name
 
-#commiting deleted files
+# commiting deleted files
 
     git ls-files --deleted -z | xargs -0 git rm 
 
-#Resetting files that are staged to be commited
+# Resetting files that are staged to be commited
 I accidentally did `git add <filename>` and it somehow added all of the files..? Anyways, I wanted to undo this hiccup so I found out that doing the following can fix the issue and rollback the staged files to nothing to be commited
 
     git reset HEAD -- .
@@ -203,11 +203,11 @@ see http://stackoverflow.com/questions/19730565/how-to-remove-files-from-git-sta
 
 It might take a little while to run as well so be prepared to wait...
 
-#Rollback a git pull
+# Rollback a git pull
 see the following for the answer
 http://stackoverflow.com/questions/1223354/undo-git-pull-how-to-bring-repos-to-old-state
 
-#Error message issues
+# Error message issues
 When tryihg to git add ... files, or in general, if you get the error that says something like:
     
     Another git process seems to be running in this repository, e.g.
@@ -231,7 +231,7 @@ To resolve this you can fix the files manually that it says are wrong or do
 
     git merge --abort
 
-#.gitignore help to deal with the following: Untracked files, Staged files, and Committed files
+# .gitignore help to deal with the following: Untracked files, Staged files, and Committed files
 .gitignore will only ignore files that are `untracked` meaning they have never been commit (or if they have been commited the files need to be changed from `tracked` to `untracked`
 
 to do this do the following
@@ -240,7 +240,7 @@ to do this do the following
     
 This will untrack the file specified. Now what you can do once the file is untracked is add it to the .gitignore file. Once its added to the .gitignore file, do `git status` again and the file that was specified to be untracked should no longer show up
 
-#mapped drives
+# mapped drives
 Sometimes I use a mapped drive to access the git repo and its files and other times I remotely log into the server. When I remotely logg in, .git has it setup that the top level directory is `/y/` (i.e. `Y:/`) so when I do `git status` the command fails saying
 
     fatal: Could not switch to 'Y:/': No such file or directory
@@ -257,7 +257,7 @@ And to use the command and do a normal `git status` for instance you would do
 
     $gitc status
 
-#submodules
+# submodules
 So if you want to have the master/ git repo and also have it include submodules (i.e. a git repo that is a child of the master/ branch), from scratch you can be inside the master/ repo and do
 
     git submodule add https://github.com/cotyembry/someRepo.git
@@ -284,7 +284,7 @@ So to commit the changes that were done to the submodule to master do (inside th
     git push origin master #or whatever the branch and remote names are for the repo
     
 
-#extra help
+# extra help
 
 go to the following and watch the 11 minute video for more help
 https://www.youtube.com/watch?v=oFYyTZwMyAg
@@ -295,11 +295,11 @@ https://www.youtube.com/watch?v=0fKg7e37bQE
 
 
 
-#Mischelaneous(sp)
+# Mischelaneous(sp)
 
 
 
-#webpack - css stylesheet loader
+# webpack - css stylesheet loader
 
     npm install style-loader css-loader --save-dev
     
@@ -313,7 +313,7 @@ https://www.youtube.com/watch?v=0fKg7e37bQE
     }
 
 
-#cd to a mapped drive
+# cd to a mapped drive
 
 cd is primarily for changing to directories, you're trying to change drives.
 from the command prompt type
