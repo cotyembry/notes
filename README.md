@@ -207,8 +207,13 @@ It might take a little while to run as well so be prepared to wait...
 see the following for the answer
 http://stackoverflow.com/questions/1223354/undo-git-pull-how-to-bring-repos-to-old-state
 
+# Git keeps prompting me for password
+you can get rid of this on the command line by doing the following:
+
+    git config --global credential.helper wincred
+
 # Error message issues
-When tryihg to git add ... files, or in general, if you get the error that says something like:
+When trying to git add ... files, or in general, if you get the error that says something like:
     
     Another git process seems to be running in this repository, e.g.
     an editor opened by 'git commit'. Please make sure all processes
