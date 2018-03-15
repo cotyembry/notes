@@ -377,3 +377,11 @@ git checkout FETCH_HEAD - - <file>
         .button {
             background-color: white;
         }
+
+
+# Visual Studio Code
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
+    "terminal.integrated.shellArgs.windows": [
+        "/K",
+        "D:\\Developer\\CustomTools\\logonCommands.cmd"
+    ]
