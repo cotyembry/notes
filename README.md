@@ -381,6 +381,7 @@ git checkout FETCH_HEAD - - <file>
 
 # Visual Studio Code
 for windows cmd terminal
+
     "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
     "terminal.integrated.shellArgs.windows": [
         "/K",
@@ -388,6 +389,7 @@ for windows cmd terminal
     ]
     
 for powershell
+
     "terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
     "terminal.integrated.shellArgs.windows": [
         "-NoExit",
