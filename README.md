@@ -395,3 +395,17 @@ for powershell
         "-NoExit",
         "C:\\Users\\johnembry\\Developer\\CustomTools\\logonCommands.cmd"
     ]
+  
+  so the powershell one will kind of work, but the .cmd file's `DOSKEY c=cls` logic doesn't work in the powershell environment. I have to use `Set-Alias c cls` but the whole point of passing in the arguments was to have a custom script to generate the aliases for me...powershell has a file much like a `.bashprofile` or `.bashrc` file in Linux so to generate one if never setup before you can check if one already exists:
+  
+    Test-Path $profile
+    
+if `False` make a new profile
+
+    New-Item -path $profile -type file –force
+    
+and it creates the file `New-Item -path $profile -type file –force` and stores it in:
+
+    C:\Users\{USERNAME}\Documents\WindowsPowerShell
+    
+
