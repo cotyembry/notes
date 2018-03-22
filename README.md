@@ -380,8 +380,16 @@ git checkout FETCH_HEAD - - <file>
 
 
 # Visual Studio Code
+for windows cmd terminal
     "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
     "terminal.integrated.shellArgs.windows": [
         "/K",
         "D:\\Developer\\CustomTools\\logonCommands.cmd"
+    ]
+    
+for powershell
+    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "terminal.integrated.shellArgs.windows": [
+        "-NoExit",
+        "C:\\Users\\johnembry\\Developer\\CustomTools\\logonCommands.cmd"
     ]
