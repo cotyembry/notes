@@ -409,3 +409,48 @@ and it creates the file `New-Item -path $profile -type file –force` and stores
     C:\Users\{USERNAME}\Documents\WindowsPowerShell
     
 
+# AutoHotkey text replacer script
+
+	;jce start adding custom commands
+	::btw::by the way
+
+	::cmo::
+	;cmo === commented out
+	FormatTime, CurrentDateTime,, yyyy
+	mYear += %CurrentDateTime%
+	mYear := mYear - 1700
+	FormatTime, CurrentDateTime,, M
+	mMonth += %CurrentDateTime%
+	StringLen, monthLength, mMonth
+	if(monthLength = 1) {
+		mMonth = 0%mMonth%
+	}
+	FormatTime, CurrentDateTime,, d
+	mDay += %CurrentDateTime%
+	StringLen, dayLength, mDay
+	if(dayLength = 1) {
+		mDay = 0%mDay%
+	}
+	SendInput jce %mYear%%mMonth%%mDay% commented out
+	return
+
+	::jcec::
+	;jcec === jcechanged
+	FormatTime, CurrentDateTime,, yyyy
+	mYear += %CurrentDateTime%
+	mYear := mYear - 1700
+	FormatTime, CurrentDateTime,, M
+	mMonth += %CurrentDateTime%
+	StringLen, monthLength, mMonth
+	if(monthLength = 1) {
+		mMonth = 0%mMonth%
+	}
+	FormatTime, CurrentDateTime,, d
+	mDay += %CurrentDateTime%
+	StringLen, dayLength, mDay
+	if(dayLength = 1) {
+		mDay = 0%mDay%
+	}
+	SendInput jce %mYear%%mMonth%%mDay% commented out
+	return
+	;jce end adding custom commands
