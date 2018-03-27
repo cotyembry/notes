@@ -417,16 +417,16 @@ and it creates the file `New-Item -path $profile -type file –force` and stores
 	::cmo::
 	;cmo === commented out
 	FormatTime, CurrentDateTime,, yyyy
-	mYear += %CurrentDateTime%
+	mYear = %CurrentDateTime%
 	mYear := mYear - 1700
 	FormatTime, CurrentDateTime,, M
-	mMonth += %CurrentDateTime%
+	mMonth = %CurrentDateTime%
 	StringLen, monthLength, mMonth
 	if(monthLength = 1) {
 		mMonth = 0%mMonth%
 	}
 	FormatTime, CurrentDateTime,, d
-	mDay += %CurrentDateTime%
+	mDay = %CurrentDateTime%
 	StringLen, dayLength, mDay
 	if(dayLength = 1) {
 		mDay = 0%mDay%
@@ -437,16 +437,16 @@ and it creates the file `New-Item -path $profile -type file –force` and stores
 	::jcec::
 	;jcec === jcechanged
 	FormatTime, CurrentDateTime,, yyyy
-	mYear += %CurrentDateTime%
+	mYear = %CurrentDateTime%
 	mYear := mYear - 1700
 	FormatTime, CurrentDateTime,, M
-	mMonth += %CurrentDateTime%
+	mMonth = %CurrentDateTime%
 	StringLen, monthLength, mMonth
 	if(monthLength = 1) {
 		mMonth = 0%mMonth%
 	}
 	FormatTime, CurrentDateTime,, d
-	mDay += %CurrentDateTime%
+	mDay = %CurrentDateTime%
 	StringLen, dayLength, mDay
 	if(dayLength = 1) {
 		mDay = 0%mDay%
