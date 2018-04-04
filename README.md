@@ -203,6 +203,14 @@ see http://stackoverflow.com/questions/19730565/how-to-remove-files-from-git-sta
 
 It might take a little while to run as well so be prepared to wait...
 
+# Reverting to a previous commit
+
+    git revert HEAD~1..HEAD
+
+or you can revert the last two commits
+
+    git revert HEAD~2..HEAD
+
 # Rollback a git pull
 see the following for the answer
 http://stackoverflow.com/questions/1223354/undo-git-pull-how-to-bring-repos-to-old-state
