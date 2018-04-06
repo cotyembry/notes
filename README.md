@@ -418,6 +418,7 @@ and it creates the file `New-Item -path $profile -type file –force` and stores
     
 
 # AutoHotkey text replacer script
+basically start AutoHotKey, go down to the notification area on the Windows toolbar/taskbar and right click the AutoHotKey logo and choose something like "edit this script" (that's what it currently shows me) and you can I guess add the following the what is currently defined in your file that pops up (or completely replace everything you have in yours with what is below...I say that because its what mine currently is and its working great)
 
         ;
         ; AutoHotkey Version: 1.x
