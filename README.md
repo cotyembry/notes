@@ -419,46 +419,215 @@ and it creates the file `New-Item -path $profile -type file –force` and stores
 
 # AutoHotkey text replacer script
 
-	;jce start adding custom commands
-	::btw::by the way
+        ;
+        ; AutoHotkey Version: 1.x
+        ; Language:       English
+        ; Author:         Lowell Heddings | geek@howtogeek.com
+        ;
+        ; Script Function:
+        ;	enable paste in the Windows command prompt
+        ;
 
-	::cmo::
-	;cmo === commented out
-	FormatTime, CurrentDateTime,, yyyy
-	mYear = %CurrentDateTime%
-	mYear := mYear - 1700
-	FormatTime, CurrentDateTime,, M
-	mMonth = %CurrentDateTime%
-	StringLen, monthLength, mMonth
-	if(monthLength = 1) {
-		mMonth = 0%mMonth%
-	}
-	FormatTime, CurrentDateTime,, d
-	mDay = %CurrentDateTime%
-	StringLen, dayLength, mDay
-	if(dayLength = 1) {
-		mDay = 0%mDay%
-	}
-	SendInput jce %mYear%%mMonth%%mDay% commented out
-	return
+        #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+        SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
+        SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-	::jcec::
-	;jcec === jcechanged
-	FormatTime, CurrentDateTime,, yyyy
-	mYear = %CurrentDateTime%
-	mYear := mYear - 1700
-	FormatTime, CurrentDateTime,, M
-	mMonth = %CurrentDateTime%
-	StringLen, monthLength, mMonth
-	if(monthLength = 1) {
-		mMonth = 0%mMonth%
-	}
-	FormatTime, CurrentDateTime,, d
-	mDay = %CurrentDateTime%
-	StringLen, dayLength, mDay
-	if(dayLength = 1) {
-		mDay = 0%mDay%
-	}
-	SendInput jce %mYear%%mMonth%%mDay% commented out
-	return
-	;jce end adding custom commands
+        #IfWinActive ahk_class ConsoleWindowClass
+        ^V::
+        SendInput {Raw}%clipboard%
+        return
+        #IfWinActive
+
+        ;jce start adding custom commands
+        ::btw::by the way
+
+        ::cmo::
+        ;cmo === commented out
+        FormatTime, CurrentDateTime,, yyyy
+        mYear = %CurrentDateTime%
+        mYear := mYear - 1700
+        FormatTime, CurrentDateTime,, M
+        mMonth = %CurrentDateTime%
+        StringLen, monthLength, mMonth
+        if(monthLength = 1) {
+            mMonth = 0%mMonth%
+        }
+        FormatTime, CurrentDateTime,, d
+        mDay = %CurrentDateTime%
+        StringLen, dayLength, mDay
+        if(dayLength = 1) {
+            mDay = 0%mDay%
+        }
+        SendInput jce %mYear%%mMonth%%mDay% commented out
+        return
+
+        ::jcea::
+        ;jcea === jceadded
+        FormatTime, CurrentDateTime,, yyyy
+        mYear = %CurrentDateTime%
+        mYear := mYear - 1700
+        FormatTime, CurrentDateTime,, M
+        mMonth = %CurrentDateTime%
+        StringLen, monthLength, mMonth
+        if(monthLength = 1) {
+            mMonth = 0%mMonth%
+        }
+        FormatTime, CurrentDateTime,, d
+        mDay = %CurrentDateTime%
+        StringLen, dayLength, mDay
+        if(dayLength = 1) {
+            mDay = 0%mDay%
+        }
+        SendInput jce %mYear%%mMonth%%mDay% added
+        return
+
+        ::jcec::
+        ;jcec === jcechanged
+        FormatTime, CurrentDateTime,, yyyy
+        mYear = %CurrentDateTime%
+        mYear := mYear - 1700
+        FormatTime, CurrentDateTime,, M
+        mMonth = %CurrentDateTime%
+        StringLen, monthLength, mMonth
+        if(monthLength = 1) {
+            mMonth = 0%mMonth%
+        }
+        FormatTime, CurrentDateTime,, d
+        mDay = %CurrentDateTime%
+        StringLen, dayLength, mDay
+        if(dayLength = 1) {
+            mDay = 0%mDay%
+        }
+        SendInput jce %mYear%%mMonth%%mDay% changed
+        return
+
+
+
+
+        ::jcech::
+        ;jcec === jcechanged
+        FormatTime, CurrentDateTime,, yyyy
+        mYear = %CurrentDateTime%
+        mYear := mYear - 1700
+        FormatTime, CurrentDateTime,, M
+        mMonth = %CurrentDateTime%
+        StringLen, monthLength, mMonth
+        if(monthLength = 1) {
+            mMonth = 0%mMonth%
+        }
+        FormatTime, CurrentDateTime,, d
+        mDay = %CurrentDateTime%
+        StringLen, dayLength, mDay
+        if(dayLength = 1) {
+            mDay = 0%mDay%
+        }
+        htmlCommentStart = <{!}--
+        htmlCommentEnd = -->
+        SendInput %htmlCommentStart% jce %mYear%%mMonth%%mDay% changed %htmlCommentEnd%
+        return
+
+
+
+        ::jcecj::
+        ;jcec === jcechanged
+        FormatTime, CurrentDateTime,, yyyy
+        mYear = %CurrentDateTime%
+        mYear := mYear - 1700
+        FormatTime, CurrentDateTime,, M
+        mMonth = %CurrentDateTime%
+        StringLen, monthLength, mMonth
+        if(monthLength = 1) {
+            mMonth = 0%mMonth%
+        }
+        FormatTime, CurrentDateTime,, d
+        mDay = %CurrentDateTime%
+        StringLen, dayLength, mDay
+        if(dayLength = 1) {
+            mDay = 0%mDay%
+        }
+        SendInput //jce %mYear%%mMonth%%mDay% changed
+        return
+
+        ::jceaj::
+        ;jceaj === jceaddedjavascript
+        FormatTime, CurrentDateTime,, yyyy
+        mYear = %CurrentDateTime%
+        mYear := mYear - 1700
+        FormatTime, CurrentDateTime,, M
+        mMonth = %CurrentDateTime%
+        StringLen, monthLength, mMonth
+        if(monthLength = 1) {
+            mMonth = 0%mMonth%
+        }
+        FormatTime, CurrentDateTime,, d
+        mDay = %CurrentDateTime%
+        StringLen, dayLength, mDay
+        if(dayLength = 1) {
+            mDay = 0%mDay%
+        }
+        SendInput //jce %mYear%%mMonth%%mDay% added
+        return
+
+        ::jcecc::
+        ;jcec === jcechanged
+        FormatTime, CurrentDateTime,, yyyy
+        mYear = %CurrentDateTime%
+        mYear := mYear - 1700
+        FormatTime, CurrentDateTime,, M
+        mMonth = %CurrentDateTime%
+        StringLen, monthLength, mMonth
+        if(monthLength = 1) {
+            mMonth = 0%mMonth%
+        }
+        FormatTime, CurrentDateTime,, d
+        mDay = %CurrentDateTime%
+        StringLen, dayLength, mDay
+        if(dayLength = 1) {
+            mDay = 0%mDay%
+        }
+        SendInput /* jce %mYear%%mMonth%%mDay% changed */
+        return
+
+        ::jceac::
+        ;jceac === jceaddedcss
+        FormatTime, CurrentDateTime,, yyyy
+        mYear = %CurrentDateTime%
+        mYear := mYear - 1700
+        FormatTime, CurrentDateTime,, M
+        mMonth = %CurrentDateTime%
+        StringLen, monthLength, mMonth
+        if(monthLength = 1) {
+            mMonth = 0%mMonth%
+        }
+        FormatTime, CurrentDateTime,, d
+        mDay = %CurrentDateTime%
+        StringLen, dayLength, mDay
+        if(dayLength = 1) {
+            mDay = 0%mDay%
+        }
+        SendInput /* jce %mYear%%mMonth%%mDay% added */
+        return
+
+        ::jceah::
+        ;jceah === jceaddedhtml
+        FormatTime, CurrentDateTime,, yyyy
+        mYear = %CurrentDateTime%
+        mYear := mYear - 1700
+        FormatTime, CurrentDateTime,, M
+        mMonth = %CurrentDateTime%
+        StringLen, monthLength, mMonth
+        if(monthLength = 1) {
+            mMonth = 0%mMonth%
+        }
+        FormatTime, CurrentDateTime,, d
+        mDay = %CurrentDateTime%
+        StringLen, dayLength, mDay
+        if(dayLength = 1) {
+            mDay = 0%mDay%
+        }
+        htmlCommentStart = <{!}--
+        htmlCommentEnd = -->
+        SendInput %htmlCommentStart% jce %mYear%%mMonth%%mDay% added %htmlCommentEnd%
+        return
+
+        ;jce end adding custom commands
