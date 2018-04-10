@@ -59,6 +59,12 @@ then to verify it is gone
     origin  https://github.com/OWNER/REPOSITORY.git (fetch)
     origin  https://github.com/OWNER/REPOSITORY.git (push)
     
+
+# create and checkout new branch
+
+    git checkout -b newBranchName
+    
+
 -------
 Okay now lets talk about pushing the project, but first we have to do one thing and it might resolve an issue (let this be magic for now if you don't understand, but still type in the command)
 
