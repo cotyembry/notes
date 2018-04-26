@@ -638,3 +638,12 @@ basically start AutoHotKey, go down to the notification area on the Windows tool
         return
 
         ;jce end adding custom commands
+	
+	
+# css media query example
+
+        @media (max-width: 1400px) {
+	        #pageHeaderTabs {
+		        font-size: 16px;
+	        }
+        }
