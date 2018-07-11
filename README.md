@@ -647,3 +647,13 @@ basically start AutoHotKey, go down to the notification area on the Windows tool
 		        font-size: 16px;
 	        }
         }
+	
+# Perl
+
+# get length of array
+
+        $numberOfArguments = scalar @ARGV;
+	
+# push onto an array
+
+        push @filesToPullIn, $_;
