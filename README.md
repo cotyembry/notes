@@ -356,6 +356,15 @@ git fetch <remote>
 git checkout FETCH_HEAD - - <file>
     
     
+# Compare/Diff two different git branches
+
+        git diff branch_1..branch_2
+
+That will produce the diff between the tips of the two branches. If you'd prefer to find the diff from their common ancestor to test, you can use three dots instead of two:
+
+        git diff branch_1...branch_2
+  
+    
 # Trigger custom event with custom object with jquery in the browser
 	$(this.parentReference).on('addedClassName', (e) => {
 		console.log('in on part of trigger with: ', e);
