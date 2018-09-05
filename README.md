@@ -666,3 +666,19 @@ basically start AutoHotKey, go down to the notification area on the Windows tool
 # push onto an array
 
         push @filesToPullIn, $_;
+	
+# RDP for command line access and other things about it
+
+start from command line
+
+    mstsc RDP_filename
+   
+launch with only terminal
+   
+    mstsc RDP_filename /console
+   
+specify a remote computer name `/f` for full screen
+   
+    mstsc RDP_filename /v:computername
+    
+you should be able to make an "RDPfile" that would store your login session by launching the GUI manually and pressing the save as option
