@@ -302,6 +302,9 @@ So to commit the changes that were done to the submodule to master do (inside th
     git commit -m "committing the changes to the master branch that were done and pushed in the submodule repo"
     git push origin master #or whatever the branch and remote names are for the repo
     
+see the following if needing to update a submodule:
+
+    https://stackoverflow.com/questions/11420701/git-submodule-is-returning-blank
 
 # extra help
 
