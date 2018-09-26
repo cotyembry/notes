@@ -313,7 +313,7 @@ Init and update are separate for a good reason. You may want to have an alternat
     
 if you still have issues you might need to do more
 
-i had to delete .gitmodules then `git rm --cached ./.gitmodules` after doing the steps you listed then did git submodule add https://urlto.git and it cloned the submodule into my parent repo 
+i had to delete .gitmodules then `git rm --cached ./.gitmodules` after doing the steps you listed then did `git submodule add https://urlto.git` and it cloned the submodule into my parent repo 
 
 
 
