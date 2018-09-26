@@ -301,8 +301,23 @@ So to commit the changes that were done to the submodule to master do (inside th
     git add -A
     git commit -m "committing the changes to the master branch that were done and pushed in the submodule repo"
     git push origin master #or whatever the branch and remote names are for the repo
+
+to update the submodule you can do:
+
+        git submodule update
+if your submodules have nested submodules, add the recursive option:
+
+
+        git submodule update --recursive
+Init and update are separate for a good reason. You may want to have an alternate repository to store changes to you submodule.
     
-see the following if needing to update a submodule:
+if you still have issues you might need to do more
+
+i had to delete .gitmodules then `git rm --cached ./.gitmodules` after doing the steps you listed then did git submodule add https://urlto.git and it cloned the submodule into my parent repo 
+
+
+
+for more info see the following if needing to update a submodule:
 
     https://stackoverflow.com/questions/11420701/git-submodule-is-returning-blank
 
