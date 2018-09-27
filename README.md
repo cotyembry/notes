@@ -304,6 +304,8 @@ So to commit the changes that were done to the submodule to master do (inside th
 
 to update the submodule you can do:
 
+        git submodule init
+
         git submodule update
 if your submodules have nested submodules, add the recursive option:
 
