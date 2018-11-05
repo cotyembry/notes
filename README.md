@@ -677,6 +677,11 @@ basically start AutoHotKey, go down to the notification area on the Windows tool
 	        }
         }
 	
+# Powershell
+set exection policy from the powershell command line run as administrator:
+
+        Set-ExecutionPolicy RemoteSigned
+	
 # Perl
 
 # get length of array
